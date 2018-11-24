@@ -1,16 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
   const newFormItem = document.querySelector('#new-item-form');
   newFormItem.addEventListener('submit', handleNewFormItemSubmit);
+
+  document.addEventListener('delete-all', deleteAllItems)
 });
 
 const handleNewFormItemSubmit = function (event) {
-  const 
-}
+  event.preventDefault();
+  console.log(event.target);
+  const formItem = createFormItem(event.target);
+  const munroList = document.querySelector('#munro-list');
 
+  munroList.appendChild(formItem);
+  event.target.reset();
+}
 
 const createFormItem = function (form) {
 
-  const item = document.createElement('li');
+  const item = document.createElement('div');
   item.classList.add('munro-item');
 
   const name = document.createElement('h2');
@@ -26,7 +33,7 @@ const createFormItem = function (form) {
   item.appendChild(rank);
 
   const county = document.createElement('p');
-  county.textContent = form.rank.value;
+  county.textContent = form.county.value;
   item.appendChild(county);
 
   return item;

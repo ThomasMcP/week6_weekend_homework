@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: Palatino;
 }
 
@@ -29,6 +29,7 @@ button, input[type="submit"] {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
+  border
 }
 
 .munro-item {
@@ -37,4 +38,4 @@ button, input[type="submit"] {
   border: 1px solid #20437c;
   border-radius: 5%;
   background: #ddeaff;
-}
+} */
